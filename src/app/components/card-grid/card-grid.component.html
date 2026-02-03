@@ -1,0 +1,7 @@
+<div class="grid">
+  @for (card of cards(); track card.id) {
+    <app-card-item [card]="card" />
+  } @empty {
+    <p class="empty-message">No cards found.</p>
+  }
+</div>

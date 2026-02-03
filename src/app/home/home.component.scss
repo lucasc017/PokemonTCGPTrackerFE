@@ -1,0 +1,40 @@
+.title-section {
+  background: #fff;
+  padding: 2rem;
+
+  h1 {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111;
+  }
+}
+
+.content-section {
+  background: #f3f4f6;
+  min-height: calc(100vh - 64px - 100px);
+  padding: 1.5rem 2rem;
+
+  app-search-bar {
+    max-width: 1400px;
+    margin: 0 auto 1.5rem;
+  }
+
+  app-card-grid {
+    display: block;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+.status-message {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+  padding: 3rem 0;
+
+  &.error {
+    color: #dc2626;
+  }
+}

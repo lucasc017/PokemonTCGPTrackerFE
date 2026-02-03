@@ -1,0 +1,18 @@
+<div class="title-section">
+  <h1>Pokemon TCG Pocket Card List</h1>
+</div>
+
+<div class="content-section">
+  <app-search-bar
+    placeholder="Search by name, set, or ID..."
+    (search)="onSearch($event)"
+  />
+
+  @if (cardService.loading()) {
+    <p class="status-message">Loading cards...</p>
+  } @else if (cardService.error()) {
+    <p class="status-message error">{{ cardService.error() }}</p>
+  } @else {
+    <app-card-grid [cards]="cardService.filteredCards()" />
+  }
+</div>
